@@ -1,0 +1,27 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:vm="using:examen2025.ViewModels"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:controls="clr-namespace:FluentAvalonia.UI.Controls;assembly=FluentAvalonia"
+        mc:Ignorable="d"
+        d:DesignWidth="800"
+        d:DesignHeight="450"
+        x:Class="examen2025.Views.MainWindow"
+        x:DataType="vm:MainWindowViewModel"
+        Icon="/Assets/avalonia-logo.ico"
+        Title="examen2025">
+
+    <Design.DataContext>
+        <vm:MainWindowViewModel />
+    </Design.DataContext>
+
+    <controls:NavigationView PaneDisplayMode="Left"
+                             IsSettingsVisible="False"
+                             PaneTitle="Examen Avalonia"
+                             SelectedItem="{Binding NavigationService.SelectedMenuItem}"
+                             MenuItemsSource="{Binding NavigationService.MenuItems}">
+        <ContentControl Content="{Binding NavigationService.CurrentView}" />
+    </controls:NavigationView>
+
+</Window>
