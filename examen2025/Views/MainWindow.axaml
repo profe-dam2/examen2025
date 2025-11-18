@@ -18,6 +18,7 @@
 
     <controls:NavigationView PaneDisplayMode="Left"
                              IsSettingsVisible="False"
+                             IsPaneOpen="False"
                              PaneTitle="Examen Avalonia"
                              SelectedItem="{Binding NavigationService.SelectedMenuItem}"
                              MenuItemsSource="{Binding NavigationService.MenuItems}">
